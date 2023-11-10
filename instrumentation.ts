@@ -1,8 +1,8 @@
 export async function register() {
   if (process.env.NEXT_RUNTIME === 'nodejs') {
-    const { BaselimeSDK, VercelPlugin, BetterHttpInstrumentation } = await import('@baselime/node-opentelemetry');
+    const { KengineSDK, VercelPlugin, BetterHttpInstrumentation } = await import('@khulnasoft/node-opentelemetry');
 
-    const sdk = new BaselimeSDK({
+    const sdk = new KengineSDK({
       serverless: true,
       instrumentations: [
         new BetterHttpInstrumentation({ 
